@@ -1,0 +1,15 @@
+<h1>Wordcount</h1>
+<h2>You entered:</h2>
+{{ fulltext_on_count }}
+<br />
+<h2>...and it contains</h2>
+{{ wordcount }} <span>words</span>
+<br />
+<br />
+<a href="{% url 'home' %}">Count again</a>
+<br />
+<h2>Total wordcount:</h2>
+{% for word, counttotal in sortedworddict %}
+{{ word }} <span>:</span> {{ counttotal }} <br /> <br />
+
+{% endfor %}
